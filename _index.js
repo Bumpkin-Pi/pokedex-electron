@@ -1,10 +1,10 @@
-//import poke_set from "./all_pokemon.json" assert {type: "json"};
 const defaultSidebarWidth = "5%"
 const expandedSidebarWidth = "25%"
+import {Pokedex} from "./pokedata.js"
+console.log(Pokedex)
 
-//let poke_set = fetch("./all_pokemon.json")
 
-function toggle_sidebar(){
+window.toggle_sidebar = function (){
     if (document.getElementById("sidebar").style.width === defaultSidebarWidth){
         document.getElementById("sidebar").style.width = expandedSidebarWidth;
         document.getElementById("entries").style.marginLeft = expandedSidebarWidth;
