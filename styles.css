@@ -6,7 +6,6 @@
     z-index:1;
     overflow:auto;
     width:5%;
-    background-color:#fff;
     background-color: #202427;
 }
 #sidebar-button{
@@ -31,6 +30,7 @@
     margin-left: 1.5%;
     height: 75px;
     border-radius: 10px;
+    cursor: pointer;
 
 }
 
@@ -51,4 +51,9 @@
     float: left;
 }
 
+.pokemon_dexno{
+    float: right;
+    color: #757575;
+    margin-right: 1%;
+}
 
