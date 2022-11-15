@@ -32,7 +32,9 @@ function creatEntry(name){
 
 
 
-creatEntry("aron")
+Object.values(Pokedex).forEach((item)=>{
+    creatEntry(item.name)
+})
 
 
 
