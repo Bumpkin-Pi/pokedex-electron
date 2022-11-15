@@ -1,6 +1,8 @@
+//import poke_set from "./all_pokemon.json" assert {type: "json"};
 const defaultSidebarWidth = "5%"
 const expandedSidebarWidth = "25%"
 
+//let poke_set = fetch("./all_pokemon.json")
 
 function toggle_sidebar(){
     if (document.getElementById("sidebar").style.width === defaultSidebarWidth){
@@ -15,14 +17,22 @@ function toggle_sidebar(){
 }
 
 
-function w3_open() {
-    document.getElementById("main").style.marginLeft = "25%";
-    document.getElementById("mySidebar").style.width = "25%";
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("openNav").style.display = 'none';
+function creatEntry(name){
+    name = name.toLowerCase()
+    let html = (
+        "<div class = \"entry\">\n" +
+        "        <img src=\"https://img.pokemondb.net/sprites/sword-shield/icon/"+name+".png\" alt=\""+name+"\" class = \"pokemon_image\">\n" +
+        "        <h1 class = \"pokemon_title\">"+(name.charAt(0).toUpperCase()+name.slice(1))+"</h1>\n" +
+        "    </div>"
+    )
+    const template = document.createElement("template");
+    template.innerHTML = html.trim();
+    document.getElementById("entries").appendChild(template.content.firstElementChild)
 }
-function w3_close() {
-    document.getElementById("main").style.marginLeft = "0%";
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("openNav").style.display = "inline-block";
-}
+
+
+
+creatEntry("aron")
+
+
+
