@@ -17,12 +17,14 @@ window.toggle_sidebar = function (){
 }
 
 
-function creatEntry(name){
+function creatEntry(name,dex){
     name = name.toLowerCase()
     let html = (
         "<div class = \"entry\">\n" +
-        "        <img src=\"https://img.pokemondb.net/sprites/sword-shield/icon/"+name+".png\" alt=\""+name+"\" class = \"pokemon_image\">\n" +
-        "        <h1 class = \"pokemon_title\">"+(name.charAt(0).toUpperCase()+name.slice(1))+"</h1>\n" +
+            "    <span class=\"link\"></span>"+
+        "        <img src=\"https://img.pokemondb.net/sprites/sword-shield/icon/"+name.replaceAll("’","").replaceAll(" ", "-").replaceAll(".", "").replace("basculin-white-striped", "basculin-red-striped").replaceAll("\u0301", "e")+".png\" alt=\""+name+"\" class = \"pokemon_image\">\n" +
+        "        <h1 class = \"pokemon_title\">"+(name.charAt(0).toUpperCase()+name.slice(1))+"</h1>\n" +"" +
+        "        <h2 class=\"pokemon_dexno\">#"+dex+"</h2>" +
         "    </div>"
     )
     const template = document.createElement("template");
@@ -33,7 +35,7 @@ function creatEntry(name){
 
 
 Object.values(Pokedex).forEach((item)=>{
-    creatEntry(item.name)
+    creatEntry(item.name, item.num)
 })
 
 
