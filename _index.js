@@ -14,13 +14,14 @@ window.toggle_sidebar = function (){
 
 function creatEntry(name,dex){
     let urlname = name.toLowerCase()
-    urlname.replace("basculin-white-striped", "basculin-red-striped")
     urlname.replaceAll("’","")
     urlname.replaceAll(" ", "-")
     urlname.replaceAll(".", "")
     urlname.replaceAll("\u0301", "e")
+    urlname.replace("basculin-white-striped", "basculin-red-striped")
 
-    let html = " <div class = 'entry' id='urlname' onclick='pokemon_click("+urlname+")'>\n"
+
+    let html = " <div class = 'entry' id='"+urlname+"' onclick='pokemon_click("+urlname+")'>\n"
     html += "        <span class='link'></span>\n"
     html += "        <img src='https://img.pokemondb.net/sprites/sword-shield/icon/"+urlname+".png' alt='"+name+"' class = 'pokemon_image' height='100%'>\n"
     html += "        <h1 class = 'pokemon_title'>"+(name.charAt(0).toUpperCase()+name.slice(1))+"</h1>\n"
