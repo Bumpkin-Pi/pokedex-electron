@@ -31,11 +31,23 @@ function creatEntry(name,dex){
     document.getElementById("entries").appendChild(template.content.firstElementChild)
 }
 
+function pokemon_click(name){
+
+}
+
+let currentList = [];
+
+function rerender() {
+    for (let x = 0; x < currentList.length; x++){
+        creatEntry(currentList[x].name, currentList[x].num)
+    }
+}
 
 
 Object.values(Pokedex).forEach((item)=>{
-    creatEntry(item.name, item.num)
+    currentList.push(item)
 })
 
+rerender()
 
 
