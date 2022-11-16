@@ -20,7 +20,7 @@ window.toggle_sidebar = function (){
 function creatEntry(name,dex){
     name = name.toLowerCase()
     let html = (
-        "<div class = \"entry\">\n" +
+        "<div class = \"entry\" id='name'>\n" +
             "    <span class=\"link\"></span>"+
         "        <img src=\"https://img.pokemondb.net/sprites/sword-shield/icon/"+name.replaceAll("’","").replaceAll(" ", "-").replaceAll(".", "").replace("basculin-white-striped", "basculin-red-striped").replaceAll("\u0301", "e")+".png\" alt=\""+name+"\" class = \"pokemon_image\" height='100%'>\n" +
         "        <h1 class = \"pokemon_title\">"+(name.charAt(0).toUpperCase()+name.slice(1))+"</h1>\n" +"" +
