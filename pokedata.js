@@ -5305,7 +5305,7 @@ export const Pokedex = { //https://github.com/smogon/pokemon-showdown/blob/maste
         otherFormes: ["Castform-Sunny", "Castform-Rainy", "Castform-Snowy"],
         formeOrder: ["Castform", "Castform-Sunny", "Castform-Rainy", "Castform-Snowy"],
     },
-    castformsunny: {
+    /*castformsunny: {
         num: 351,
         name: "Castform-Sunny",
         baseSpecies: "Castform",
@@ -5349,7 +5349,7 @@ export const Pokedex = { //https://github.com/smogon/pokemon-showdown/blob/maste
         eggGroups: ["Fairy", "Amorphous"],
         requiredAbility: "Forecast",
         battleOnly: "Castform",
-    },
+    },*/
     kecleon: {
         num: 352,
         name: "Kecleon",
