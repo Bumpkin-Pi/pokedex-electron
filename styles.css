@@ -33,6 +33,15 @@
 }
 
 
+#search{
+    float: right;
+    height: 60%;
+    background-color: #757575;
+    color: white;
+    width: 30%;
+    position: center;
+}
+
 .entry{
     background-color: #202427;
     color: white;
@@ -55,8 +64,6 @@
     position: center;
 }
 
-
-
 .pokemon_image{
     margin-top: auto;
     margin-bottom: auto;
@@ -67,6 +74,7 @@
     transform: translateY(-50%);
     overflow:hidden;
 }
+
 .pokemon_title{
     margin-top: auto;
     margin-bottom: auto;
